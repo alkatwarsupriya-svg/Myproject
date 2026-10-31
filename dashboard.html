@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complaints Dashboard</title>
+</head>
+<body>
+    <h1>Waste Complaints Dashboard</h1>
+
+    <table border="1" cellpadding="8">
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Category</th>
+            <th>Location</th>
+            <th>Description</th>
+            <th>Status</th>
+        </tr>
+
+        {% for c in complaints %}
+        <tr>
+            <td>{{ c["id"] }}</td>
+            <td>{{ c["name"] }}</td>
+            <td>{{ c["category"] }}</td>
+            <td>{{ c["location"] }}</td>
+            <td>{{ c["description"] }}</td>
+            <td>{{ c["status"] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <p><a href="/">Back to Home</a></p>
+</body>
+</html>

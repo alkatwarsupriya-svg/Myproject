@@ -1,0 +1,143 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report Waste</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: #f0f7f0;
+            color: #26352a;
+        }
+
+        header {
+            background: #218838;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 30px auto;
+            padding: 25px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 3px 12px #00000012;
+        }
+
+        h2 {
+            color: #218838;
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            margin-top: 16px;
+            margin-bottom: 7px;
+            font-weight: bold;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 15px;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        button {
+            width: 100%;
+            margin-top: 22px;
+            padding: 14px;
+            background: #218838;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #176b32;
+        }
+
+        .back {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            color: #218838;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>♻️ Smart Waste Management</h1>
+        <p>Report Waste in Your Area</p>
+    </header>
+
+    <div class="container">
+        <h2>Waste Reporting Form</h2>
+
+        <form id="wasteForm">
+
+            <label for="name">Your Name</label>
+            <input type="text" id="name"
+                   placeholder="Enter your name" required>
+
+            <label for="type">Waste Category</label>
+            <select id="type" required>
+                <option value="">Select waste type</option>
+                <option value="Wet Waste">Wet Waste</option>
+                <option value="Dry Waste">Dry Waste</option>
+                <option value="Plastic Waste">Plastic Waste</option>
+                <option value="E-Waste">E-Waste</option>
+                <option value="Other">Other</option>
+            </select>
+
+            <label for="location">Waste Location</label>
+            <input type="text" id="location"
+                   placeholder="Enter area or address" required>
+
+            <label for="photo">Upload Waste Photo</label>
+            <input type="file" id="photo"
+                   accept="image/*">
+
+            <label for="description">Description</label>
+            <textarea id="description" rows="4"
+                      placeholder="Describe the waste location"></textarea>
+
+            <button type="submit">Submit Report</button>
+
+        </form>
+
+        <a class="back" href="index.html">← Back to Home</a>
+    </div>
+
+    <script>
+        document.getElementById("wasteForm")
+            .addEventListener("submit", function(event) {
+                event.preventDefault();
+
+                alert("Form checked successfully! Backend connection is still required to save the report.");
+
+                this.reset();
+            });
+    </script>
+
+</body>
+</html>

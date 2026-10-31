@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Waste Management</title>
+</head>
+<body>
+    <h1>Smart Waste Management System</h1>
+    <h2>Register a Waste Complaint</h2>
+
+    <form action="/report" method="POST">
+        <label>Your Name:</label>
+        <input type="text" name="name" required>
+        <br><br>
+
+        <label>Waste Category:</label>
+        <select name="category" required>
+            <option value="">Select Category</option>
+            <option value="Wet Waste">Wet Waste</option>
+            <option value="Dry Waste">Dry Waste</option>
+            <option value="Plastic">Plastic</option>
+            <option value="E-Waste">E-Waste</option>
+        </select>
+        <br><br>
+
+        <label>Location:</label>
+        <input type="text" name="location" required>
+        <br><br>
+
+        <label>Description:</label>
+        <textarea name="description"></textarea>
+        <br><br>
+
+        <button type="submit">Submit Complaint</button>
+    </form>
+
+    <p><a href="/dashboard">View Complaints Dashboard</a></p>
+</body>
+</html>
